@@ -1,0 +1,148 @@
+:root{
+    --primary-color: #881111;
+    --text-color: #b4553b;
+    --bg-color: #743e13;
+}
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'seoge UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-color: rgba(183, 101, 78, 0.986);
+    color: rgb(125, 15, 9);
+    line-height: 1.6rem;
+    overflow-x: hidden;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.background-image{
+    object-fit: cover;
+    position: fixed;
+    height: 100vh;
+    width: 140%;
+    z-index: -100;
+
+}
+nav{
+    position: fixed;
+    top: 10px;
+    width: 98%;
+    padding: 20px 50px;
+    margin: 0 2rem;
+    background: rgba(218, 218, 218, 0.342);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #979797;
+    z-index:100;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 1rem;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav ul li{
+    margin: 0 20px;
+}
+
+nav ul li a{
+    color: bisque;
+    text-decoration: none;
+    font-weight: 600px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover{
+    color:#8a0707
+}
+.hero{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 80px;
+}
+.profile-img{
+    width: 180px;
+    height: auto;
+    border-radius: 25%;
+    border: 3px solid #8a0707;
+    margin-bottom: 20px;
+    transition: 0.3s;
+    box-shadow: 0 0 4px 2px #8c340f9f;
+}
+.profile-img:hover{
+    box-shadow: 0 0 30px 10px #c48f8f
+}
+
+h1{
+    font-size: 3rem;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, rgb(211, 122, 70), orangered);
+    -webkit-background-clip: x;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    height: 3rem;
+    
+}
+
+h2{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+section{
+    padding: 100px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-section .container{
+    background: var(--glass-bg);
+    padding: 2.25rem;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--gklass-border);
+    text-align: center;
+    transition: o.3s;
+}
+
+.container:hover {
+    transform: scale(1.025);
+    border-color: var(--primary-color);
+    transition: o.3s;
+
+}
+.prijects-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+}
+
+.project-card{
+    background: var(--glass-big);
+    border-radius: var(--border-radius-px);
+    overflow: hidden;
+    border: 1px solid var(--glasss-border);
+    transition: 0.4s;
+    backdrop-filter: blur(5px);
+}
+.project-card:hover {
+    transform: scale(1.025);
+    border-color: var(--orimary-color);
+    background: var(--glass-big-dark);
+}
+.project-card:hover {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    -webkit-user-animation: none;
+}
