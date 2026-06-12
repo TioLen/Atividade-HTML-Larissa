@@ -40,10 +40,11 @@
             <img src="fds.jpg" alt="" class="profile-img">
             <h1>Larissa Ramos</h1>
             <p>Melhor estudante da escola.</p>
+            <texto class="lorem"></texto>
         </section>
 
         <section id="sobre" class="about-section">
-            <div>
+            <div class="container">
                 <h2>Elogios</h2>
                 <p>
                     Brilhante, incrível, magnífica, carismática, autêntica, inteligente, encantadora, sensacional,
@@ -56,43 +57,60 @@
 
         </section>
         <h2>Meus projetos</h2>
-        <div class="projects-grids">
+        <div class="projects-grid">
             <div class="project-card">
                 <img src="lala.jpg" alt="" class="profile-img">
-                <h1>my babe</h1>
-                <a href="#" target="_blank">
-                    <button>ver projeto</button>
+                <h1>My babe</h1>
+                <a href="uli.jpg" target="_blank">
+                    Ver projeto
                 </a>
             </div>
+            <div class="project-card">
+                <img src="pint.jpg" alt="" class="profile-img">
+                <h1>My girls</h1>
+                <a href="sala.jpg" target="_blank">
+                    Ver projeto
+                </a>
+            </div>
+            <texto class="lorem"></texto><br>
+        </div>
+        <section id="contato" class="contact-section">
+            <h2>Contato</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" placeholder="Seu nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="">Mensagem:</label>
+                    <textarea name="" id="message" placeholder="Sua mensagem"></textarea>
+                </div>
+                <button type="submit" clas="whatsapp">Enviar para o Whatsapp</button>
+            </form>
+        </section>
 
-            <div class="projects-grids">
-                <div class="projects-grids">
-                    <div class="project-card">
-                        <img src="pint.jpg" alt="" class="profile-img">
-                        <h1>my girls</h1>
-                        <a href="#" target="_blank">
-                            <button>ver projeto</button>
-                        </a>
-                        </a>
-                    </div>
-                    <texto class="lorem"></texto><br>
-
-                    <section id="contato" class="contact-section">
-                        <h2>contato</h2>
-                        <form id="contact-form">
-                            <div class="form-group">
-                                <label for="name">Nome:</label>
-                                <input type="text" id="name" placeholder="Seu nome" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="">mensagem:</label>
-                                <textarea name="" id="message" placeholder="Sua mensagem"></textarea>
-                            </div>
-                            <button type="submit" clas="whatsapp">Enviar para o Whatsapp</button>
-                        </form>
-                    </section>
     </main>
 
 </body>
 
 </html>
+
+<!-- lógica do formulário  -->
+<script>
+    const form = document.getElementById('contact-form');
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById('name').value;
+        const message = document.getElementById('message').value;
+        const phoneNumber = "11989754665";
+
+        const text = `Olá, meu nome é ${name}.\n${message}`;
+        const encodedText = encodeURIComponent(text);
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedText}`;
+
+        window.open(whatsappUrl, '_blank');
+    });
+
+</script>
